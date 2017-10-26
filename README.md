@@ -21,7 +21,7 @@ Showing an alert on the click of a button:
 ```
 
 ```javascript
-$("#alert").click(function(){
+$("#alert").click(function () {
   alert("Hi! I'm an alert");
 })
 ```
@@ -35,7 +35,7 @@ Usage of one of the [eventObject](http://api.jquery.com/Types/#Event) methods:
 ```
 
 ```javascript
-$("#myLink").click(function(event){
+$("#myLink").click(function (event) {
   event.preventDefault();
 });
 ```
@@ -55,7 +55,7 @@ jqueryElement.click( [eventData ], handler )
 **eventData:** It can be of **any** type.
 
 ```javascript
-$("element").click({param1: "Hello", param2: "World"}, function(event){
+$("element").click({ param1: "Hello", param2: "World" }, function (event) {
   alert(event.data.param1);
   alert(event.data.param2);
 });
@@ -69,7 +69,7 @@ $( "element" ).click();
 Using the above example and adding `.click()`
 
 ```javascript
-$("#alert").click(function(){
+$("#alert").click(function () {
   alert("Hi! I'm an alert");
 });
 
