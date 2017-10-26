@@ -19,7 +19,7 @@ title: Center an Image Using Text Align Center
     </style>
   </head>
   <body>
-    <div class="img-container"> <!-- Image's parent -->
+    <div class="img-container"> <!-- Block parent element -->
       <img src="user.png" alt="John Doe">
     </div>
   </body>
@@ -41,7 +41,7 @@ title: Center an Image Using Text Align Center
     </style>
   </head>
   <body>
-    <span class="img-container">
+    <span class="img-container"> <!-- Inline parent element -->
       <img src="user.png" alt="">
     </span>
   </body>
