@@ -1,35 +1,34 @@
 ---
-title: RegExp.prototype.test
+title: Center an Image Using Text Align Center
 ---
-## RegExp.prototype.test
+## Center an Image Using Text Align Center
 
-The ```test()``` method returns ```true``` if a string matches the regular expression, and ```false``` if it doesn't.
+```img``` is an inline, empty (no closing tag) element. It can be easily centered by adding the ```text-align: center;``` CSS property to the parent element that contains it.
 
-## Examples
+### Example
 
-```javascript
-let str = 'freeCodeCamp';
-let regEx = /Code/;
-let result = regEx.test(str);
-
-console.log(result); // prints true
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Center an Image using text align center</title>
+    <style>
+      .img-container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img-container"> <!-- Image's parent -->
+      <img src="user.png" alt="John Doe">
+    </div>
+  </body>
+</html>
 ```
-**Note:** Regular expressions are case-sensitive. The above example will return ```false``` if the ```regEx``` is ```/code/``` instead of ```/Code/```. To make the regular expression case-insensitive, you have to add the ```i``` flag to the regular expression.
 
-```javascript
-let str = 'freeCodeCamp';
-let regEx = /code/;
-let result = regEx.test(str);
-
-console.log(result); // prints false
-
-// Include the 'i' flag.
-
-regEx = /code/i;
-result = regEx.test(str);
-console.log(result); // prints true
-```
+[Codepen](https://codepen.io/aravindio/pen/PJMXbp)
 
 #### More Information:
+<!-- Please add any articles you think might be helpful to read before writing the article -->
 
-Check out the [official MDN ```RegExp.prototype.test()```](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) page for more information.
+
