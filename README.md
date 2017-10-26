@@ -1,51 +1,60 @@
 ---
-title: Center an Image Using Text Align Center
+title: Array.prototype.concat
 ---
-## Center an Image Using Text Align Center
+## Array.prototype.concat
 
-```img``` is an inline element. It can be easily centered by adding the ```text-align: center;``` CSS property to the parent element that contains it.
+The ```concat()``` method merges two or more arrays and returns a new array. It doesn't mutate (change) the original arrays.
 
-### Example
+## Example
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Center an Image using text align center</title>
-    <style>
-      .img-container {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="img-container"> <!-- Block parent element -->
-      <img src="user.png" alt="John Doe">
-    </div>
-  </body>
-</html>
+```js
+let arr1 = [1, 2, 3, 4];
+let arr2 = [5, 6, 7, 8];
+
+let result = arr1.concat(arr2);
+
+console.log(arr1); // prints [1, 2, 3, 4], doesn't change
+console.log(arr2); // prints [5, 6, 7, 8], doesn't change
+console.log(result); // prints [1, 2, 3, 4, 5, 6, 7, 8]
+
 ```
 
-**Note:** The parent element must be a block element. If it is not a block element, you should add ```display: block;``` CSS property along with the ```text-align``` property.
+## Different ways of using ```concat()```
 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Center an Image using text align center</title>
-    <style>
-      .img-container {
-        text-align: center;
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <span class="img-container"> <!-- Inline parent element -->
-      <img src="user.png" alt="">
-    </span>
-  </body>
-</html>
+### Method 1
+
+```javascript
+let arr1 = [1, 2, 3, 4];
+let arr2 = [5, 6, 7, 8];
+
+let result = arr1.concat(arr2);
+
+console.log(result); // prints [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
-**Demo:** [Codepen](https://codepen.io/aravindio/pen/PJMXbp)
+### Method 2
+
+```javascript
+let arr1 = [1, 2, 3, 4];
+let arr2 = [5, 6, 7, 8];
+
+let result = [].concat(arr1, arr2);
+
+console.log(result); // prints [1, 2, 3, 4, 5, 6, 7, 8]
+```
+
+### Method 3
+
+```javascript
+let arr1 = [1, 2, 3, 4];
+let arr2 = [5, 6, 7, 8];
+
+let result = Array.prototype.concat(arr1, arr2);
+
+console.log(result); // prints [1, 2, 3, 4, 5, 6, 7, 8]
+```
+
+
+#### More Information:
+
++Check out the official MDN page on [```Array.prototype.concat()```](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) for more information.
