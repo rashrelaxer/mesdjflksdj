@@ -3,7 +3,7 @@ title: Center an Image Using Text Align Center
 ---
 ## Center an Image Using Text Align Center
 
-```img``` is an inline, empty (no closing tag) element. It can be easily centered by adding the ```text-align: center;``` CSS property to the parent element that contains it.
+```img``` is an inline element. It can be easily centered by adding the ```text-align: center;``` CSS property to the parent element that contains it.
 
 ### Example
 
@@ -26,9 +26,26 @@ title: Center an Image Using Text Align Center
 </html>
 ```
 
-[Codepen](https://codepen.io/aravindio/pen/PJMXbp)
+**Note:** The parent element must be a block element. If it is not a block element, you should add ```display: block;``` CSS property along with the ```text-align``` property.
 
-#### More Information:
-<!-- Please add any articles you think might be helpful to read before writing the article -->
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Center an Image using text align center</title>
+    <style>
+      .img-container {
+        text-align: center;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="img-container">
+      <img src="user.png" alt="">
+    </span>
+  </body>
+</html>
+```
 
-
+**Demo:** [Codepen](https://codepen.io/aravindio/pen/PJMXbp)
