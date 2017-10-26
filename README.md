@@ -36,7 +36,7 @@ Usage of one of the [eventObject](http://api.jquery.com/Types/#Event) methods:
 
 ```javascript
 $("#myLink").click(function(event){
-	event.preventDefault();
+  event.preventDefault();
 });
 ```
 
@@ -56,8 +56,8 @@ jqueryElement.click( [eventData ], handler )
 
 ```javascript
 $("element").click({param1: "Hello", param2: "World"}, function(event){
-    alert(event.data.param1);
-    alert(event.data.param2);
+  alert(event.data.param1);
+  alert(event.data.param2);
 });
 ```
 
@@ -69,6 +69,10 @@ $( "element" ).click();
 Using the above example and adding `.click()`
 
 ```javascript
+$("#alert").click(function(){
+  alert("Hi! I'm an alert");
+});
+
 $("#alert").click();
 ```
 
@@ -78,5 +82,4 @@ Now without having to click the button, the click event will be triggered when w
 
 #### More Information:
 
-For more information, please visit the [official website](https://api.jquery.com/click/#click) 
-
+For more information, please visit the [official website](https://api.jquery.com/click/#click)
